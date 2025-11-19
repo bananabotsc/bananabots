@@ -14,8 +14,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #0a0a0a;
-            color: #fff;
+            background: #f5f5f5;
+            color: #333;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -26,11 +26,12 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(251, 191, 36, 0.1);
+            border-bottom: 1px solid rgba(234, 179, 8, 0.2);
             z-index: 100;
             padding: 1.5rem 6rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .nav-content {
@@ -44,7 +45,13 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #fbbf24;
+            color: #eab308;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #ca8a04;
         }
 
         .nav-links {
@@ -54,7 +61,7 @@
         }
 
         .nav-links a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
@@ -63,7 +70,7 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-            color: #fbbf24;
+            color: #eab308;
         }
 
         /* Page container */
@@ -160,7 +167,7 @@
             right: -20%;
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.1) 0%, transparent 70%);
             border-radius: 50%;
             z-index: 0;
         }
@@ -173,12 +180,12 @@
         .image-container {
             width: 100%;
             aspect-ratio: 1;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            background: linear-gradient(135deg, #e5e5e5 0%, #d4d4d4 100%);
             border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
         }
@@ -187,7 +194,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(45deg, rgba(251, 191, 36, 0.1), transparent);
+            background: linear-gradient(45deg, rgba(234, 179, 8, 0.1), transparent);
             pointer-events: none;
         }
 
@@ -208,11 +215,12 @@
             font-weight: 700;
             margin-bottom: 2rem;
             line-height: 1.1;
+            color: #1a1a1a;
         }
 
         .hero-text p {
             font-size: 1.1rem;
-            color: #999;
+            color: #666;
             margin-bottom: 1.2rem;
             font-weight: 300;
         }
@@ -232,11 +240,12 @@
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 2rem;
+            color: #1a1a1a;
         }
 
         .vision-text p {
             font-size: 1.05rem;
-            color: #999;
+            color: #666;
             margin-bottom: 1.5rem;
             font-weight: 300;
             line-height: 1.8;
@@ -244,7 +253,7 @@
 
         /* About Section */
         .about {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
             padding: 8rem 6rem;
             margin: 4rem 0;
         }
@@ -259,11 +268,13 @@
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 3rem;
+            color: white;
         }
 
         .about p {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
+            color: white;
             opacity: 0.95;
             font-weight: 300;
             line-height: 1.8;
@@ -281,6 +292,7 @@
             font-weight: 700;
             margin-bottom: 4rem;
             text-align: center;
+            color: #1a1a1a;
         }
 
         .goals-grid {
@@ -290,12 +302,13 @@
         }
 
         .goal-item {
-            background: #1a1a1a;
+            background: white;
             padding: 3rem;
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .goal-item::before {
@@ -304,7 +317,7 @@
             inset: 0;
             border-radius: 16px;
             padding: 1px;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            background: linear-gradient(135deg, #eab308, #ca8a04);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -319,18 +332,19 @@
         .goal-item:hover {
             transform: translateY(-4px);
             border-color: transparent;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .goal-number {
             font-size: 0.9rem;
-            color: #fbbf24;
+            color: #eab308;
             font-weight: 600;
             margin-bottom: 1rem;
         }
 
         .goal-item p {
             font-size: 1.05rem;
-            color: #ccc;
+            color: #333;
             line-height: 1.6;
         }
 
@@ -346,6 +360,7 @@
             font-weight: 700;
             margin-bottom: 4rem;
             text-align: center;
+            color: #1a1a1a;
         }
 
         .events-grid {
@@ -356,20 +371,22 @@
         }
 
         .event-card {
-            background: #1a1a1a;
+            background: white;
             border-radius: 16px;
             padding: 2.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .event-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(251, 191, 36, 0.3);
+            border-color: rgba(234, 179, 8, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .event-type {
-            color: #fbbf24;
+            color: #eab308;
             font-size: 0.85rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -381,6 +398,7 @@
             font-size: 1.4rem;
             margin-bottom: 1.5rem;
             font-weight: 600;
+            color: #1a1a1a;
         }
 
         .event-detail {
@@ -388,12 +406,12 @@
             align-items: center;
             gap: 0.8rem;
             margin-bottom: 0.8rem;
-            color: #999;
+            color: #666;
             font-size: 0.95rem;
         }
 
         .event-detail-label {
-            color: #666;
+            color: #999;
             min-width: 70px;
         }
 
@@ -401,7 +419,7 @@
             margin-top: 1.5rem;
             width: 100%;
             padding: 0.9rem;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            background: linear-gradient(135deg, #eab308, #ca8a04);
             border: none;
             border-radius: 8px;
             color: white;
@@ -413,19 +431,20 @@
 
         .rsvp-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+            box-shadow: 0 10px 30px rgba(234, 179, 8, 0.4);
         }
 
         .meeting-times {
-            background: #1a1a1a;
+            background: white;
             border-radius: 16px;
             padding: 2.5rem;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .meeting-times p {
-            color: #999;
+            color: #666;
             margin-bottom: 0.8rem;
             font-size: 1.05rem;
         }
@@ -442,6 +461,7 @@
             font-weight: 700;
             margin-bottom: 4rem;
             text-align: center;
+            color: #1a1a1a;
         }
 
         .team-category {
@@ -451,41 +471,50 @@
         .team-category h3 {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #fbbf24;
+            color: #eab308;
             margin-bottom: 2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-align: center;
         }
 
         .team-grid {
             display: grid;
-            gap: 1.5rem;
+            gap: 2rem;
+            justify-items: center;
         }
 
         .cofounders-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 300px);
+            justify-content: center;
         }
 
         .execs-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 300px);
+            justify-content: center;
         }
 
         .team-card {
-            background: #1a1a1a;
-            border-radius: 12px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             cursor: pointer;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 1.5rem;
+            text-align: center;
+            width: 300px;
+            height: 300px;
             perspective: 1000px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .team-card:hover {
-            border-color: rgba(251, 191, 36, 0.3);
-            transform: translateX(4px);
+            border-color: rgba(234, 179, 8, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .team-card.flipping {
@@ -511,7 +540,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.8);
             z-index: 2000;
             align-items: center;
             justify-content: center;
@@ -533,13 +562,13 @@
         }
 
         .expanded-content {
-            background: #1a1a1a;
+            background: white;
             border-radius: 24px;
             max-width: 800px;
             width: 90%;
             max-height: 90vh;
             overflow-y: auto;
-            border: 1px solid rgba(251, 191, 36, 0.2);
+            border: 1px solid rgba(234, 179, 8, 0.2);
             position: relative;
             animation: slideIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             transform-origin: center;
@@ -557,7 +586,7 @@
         }
 
         .expanded-header {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            background: linear-gradient(135deg, #eab308, #ca8a04);
             padding: 3rem;
             border-radius: 24px 24px 0 0;
             text-align: center;
@@ -597,6 +626,13 @@
             justify-content: center;
             font-size: 3rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .expanded-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .expanded-header h2 {
@@ -621,7 +657,7 @@
 
         .about-section-expanded h4 {
             font-size: 1.1rem;
-            color: #fbbf24;
+            color: #eab308;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
@@ -629,7 +665,7 @@
         }
 
         .about-section-expanded p {
-            color: #ccc;
+            color: #666;
             line-height: 1.8;
             font-size: 1.05rem;
             margin-bottom: 1rem;
@@ -644,7 +680,7 @@
         .contact-button {
             flex: 1;
             padding: 0.9rem;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            background: linear-gradient(135deg, #eab308, #ca8a04);
             border: none;
             border-radius: 8px;
             color: white;
@@ -659,25 +695,34 @@
 
         .contact-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+            box-shadow: 0 10px 30px rgba(234, 179, 8, 0.4);
         }
 
         .team-avatar {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #eab308, #ca8a04);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             flex-shrink: 0;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .team-info h4 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
         }
 
         .team-info p {
@@ -690,7 +735,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.8);
             z-index: 1000;
             align-items: center;
             justify-content: center;
@@ -698,12 +743,12 @@
         }
 
         .modal-content {
-            background: #1a1a1a;
+            background: white;
             padding: 3rem;
             border-radius: 16px;
             max-width: 500px;
             width: 90%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             position: relative;
         }
 
@@ -718,29 +763,29 @@
         }
 
         .close-modal:hover {
-            color: #fff;
+            color: #333;
         }
 
         .modal h2 {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            color: #fbbf24;
+            color: #eab308;
         }
 
         .modal input {
             width: 100%;
             padding: 1rem;
             margin-bottom: 1rem;
-            background: #0a0a0a;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #f5f5f5;
+            border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            color: white;
+            color: #333;
             font-size: 1rem;
         }
 
         .modal input:focus {
             outline: none;
-            border-color: #fbbf24;
+            border-color: #eab308;
         }
 
         @media (max-width: 1024px) {
@@ -798,6 +843,11 @@
             .about, .goals, .events, .team {
                 padding: 3rem 1.5rem;
             }
+
+            .team-card {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -805,10 +855,11 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-content">
-            <div class="logo">Banana Bots</div>
+            <div class="logo" onclick="showPage('home')">Banana Bots</div>
             <ul class="nav-links">
                 <li><a onclick="showPage('home')" class="active">Home</a></li>
-                <li><a onclick="showPage('goals')">Goals & Events</a></li>
+                <li><a onclick="showPage('goals')">Goals</a></li>
+                <li><a onclick="showPage('events')">Events</a></li>
                 <li><a onclick="showPage('team')">Our Team</a></li>
             </ul>
         </div>
@@ -857,9 +908,8 @@
         </section>
     </div>
 
-    <!-- Goals & Events Page -->
+    <!-- Goals Page -->
     <div id="goals-page" class="page">
-        <!-- Goals Section -->
         <section class="goals">
             <h2 class="fade-in">Goals</h2>
             <div class="goals-grid">
@@ -881,8 +931,10 @@
                 </div>
             </div>
         </section>
+    </div>
 
-        <!-- Events Section -->
+    <!-- Events Page -->
+    <div id="events-page" class="page">
         <section class="events">
             <h2 class="fade-in">Events & Activities</h2>
             <div class="events-grid">
@@ -947,7 +999,6 @@
 
     <!-- Team Page -->
     <div id="team-page" class="page">
-        <!-- Team Section -->
         <section class="team">
             <h2 class="fade-in">Our Team</h2>
             
@@ -955,16 +1006,20 @@
                 <h3>Co-Founders</h3>
                 <div class="team-grid cofounders-grid">
                     <div class="team-card stagger-item delay-1" onclick="showExpandedMember('cofounder1')">
-                        <div class="team-avatar">👤</div>
+                        <div class="team-avatar">
+                            <img src="arya.jpg" alt="Arya Jangity">
+                        </div>
                         <div class="team-info">
                             <h4>Arya Jangity</h4>
                             <p>Co-Founder</p>
                         </div>
                     </div>
                     <div class="team-card stagger-item delay-2" onclick="showExpandedMember('cofounder2')">
-                        <div class="team-avatar">👤</div>
+                        <div class="team-avatar">
+                            <img src="zaara.jpg" alt="Zaara Abbas">
+                        </div>
                         <div class="team-info">
-                            <h4>Zaraa Abba</h4>
+                            <h4>Zaara Abbas</h4>
                             <p>Co-Founder</p>
                         </div>
                     </div>
@@ -975,14 +1030,18 @@
                 <h3>Software Leads</h3>
                 <div class="team-grid execs-grid">
                     <div class="team-card stagger-item delay-1" onclick="showExpandedMember('exec1')">
-                        <div class="team-avatar">👤</div>
+                        <div class="team-avatar">
+                            <img src="vihari.jpg" alt="Vihari Tejomurtula">
+                        </div>
                         <div class="team-info">
                             <h4>Vihari Tejomurtula</h4>
                             <p>Software Lead</p>
                         </div>
                     </div>
                     <div class="team-card stagger-item delay-2" onclick="showExpandedMember('exec2')">
-                        <div class="team-avatar">👤</div>
+                        <div class="team-avatar">
+                            <img src="raksshana.jpg" alt="Raksshana Harish Babu">
+                        </div>
                         <div class="team-info">
                             <h4>Raksshana Harish Babu</h4>
                             <p>Software Lead</p>
@@ -997,14 +1056,17 @@
             <div class="expanded-content">
                 <div class="expanded-header">
                     <span class="close-expanded" onclick="closeExpanded('cofounder1')">&times;</span>
-                    <div class="expanded-avatar">👤</div>
+                    <div class="expanded-avatar">
+                        <img src="arya.jpg" alt="Arya Jangity">
+                    </div>
                     <h2>Arya Jangity</h2>
                     <h3>Co-Founder</h3>
                 </div>
                 <div class="expanded-body">
                     <div class="about-section-expanded">
                         <h4>About</h4>
-                        <p>Arya is a co-founder of Banana Bots, bringing passion and expertise to the field of humanoid robotics.</p>
+                        <p>Arya Jangity is a robotics engineering student at UC Santa Cruz with a passion for robotics, healthcare innovation, and building technology that improves people's lives. He has experience in mechanical design, electronics, and software. Before UCSC, he served as the Mechanical Executive Lead for FRC Team 670, leading a team of 30+ people to multiple awards and the 2024 FIRST World Championship.</p>
+                        <p>At UCSC, Arya works as a humanoid hand researcher for Slugbotics, developing a biomimetic hand with tactile sensing, heat detection, finger curling/extending and splaying. As a co-founder of BananaBots, he's focused on uniting students to create meaningful assistive technologies through collaboration and creativity.</p>
                     </div>
                     <div class="contact-info">
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ajangity@ucsc.edu" target="_blank" class="contact-button">Send Message</a>
@@ -1018,14 +1080,21 @@
             <div class="expanded-content">
                 <div class="expanded-header">
                     <span class="close-expanded" onclick="closeExpanded('cofounder2')">&times;</span>
-                    <div class="expanded-avatar">👤</div>
-                    <h2>Zaraa Abba</h2>
+                    <div class="expanded-avatar">
+                        <img src="zaara.jpg" alt="Zaara Abbas">
+                    </div>
+                    <h2>Zaara Abbas</h2>
                     <h3>Co-Founder</h3>
                 </div>
                 <div class="expanded-body">
                     <div class="about-section-expanded">
                         <h4>About</h4>
-                        <p>Zaraa is a co-founder of Banana Bots, dedicated to advancing humanoid robotics technology.</p>
+                        <p>Zaara Abbas is a biomolecular engineering student at UC Santa Cruz. She has extensive experience across medical research, science communication, and outreach. Zaara also works with computational tools in biology, including developing Python-based solutions for research applications, and is currently collaborating with a Visiting Scholar at Stanford University on researching genetic diversity in dragonfly populations.</p>
+                        <p>Zaara is driven by a passion to make scientific and healthcare innovation more accessible, impactful, and understandable to the communities who need it most.</p>
+                    </div>
+                    <div class="contact-info">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zabbas3@ucsc.edu" target="_blank" class="contact-button">Send Message</a>
+                        <a href="https://www.linkedin.com/in/zaara-abbas" target="_blank" class="contact-button">View LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -1035,14 +1104,17 @@
             <div class="expanded-content">
                 <div class="expanded-header">
                     <span class="close-expanded" onclick="closeExpanded('exec1')">&times;</span>
-                    <div class="expanded-avatar">👤</div>
+                    <div class="expanded-avatar">
+                        <img src="vihari.jpg" alt="Vihari Tejomurtula">
+                    </div>
                     <h2>Vihari Tejomurtula</h2>
                     <h3>Software Lead</h3>
                 </div>
                 <div class="expanded-body">
                     <div class="about-section-expanded">
                         <h4>About</h4>
-                        <p>Vihari is a Software Lead at Banana Bots, bringing technical expertise to the development of our robotics systems.</p>
+                        <p>Vihari Tejomurtula is a first-year Computer Engineering student at UC Santa Cruz with a strong interest in AI innovation and efficient machine learning systems. He built a medical-imaging classifier that incorporates explainability tools like Grad-CAM and Integrated Gradients, and he is developing a survey research paper on neural data compression that explores hardware-aware techniques, distributed and federated methods, and emerging approaches.</p>
+                        <p>He's driven by a commitment to using AI to create novel, more efficient solutions across a wide range of applications.</p>
                     </div>
                     <div class="contact-info">
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vtejomur@ucsc.edu" target="_blank" class="contact-button">Send Message</a>
@@ -1056,7 +1128,9 @@
             <div class="expanded-content">
                 <div class="expanded-header">
                     <span class="close-expanded" onclick="closeExpanded('exec2')">&times;</span>
-                    <div class="expanded-avatar">👤</div>
+                    <div class="expanded-avatar">
+                        <img src="raksshana.jpg" alt="Raksshana Harish Babu">
+                    </div>
                     <h2>Raksshana Harish Babu</h2>
                     <h3>Software Lead</h3>
                 </div>
@@ -1079,7 +1153,7 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('rsvpModal')">&times;</span>
             <h2>RSVP for Event</h2>
-            <p id="eventName" style="margin-bottom: 2rem; color: #999;"></p>
+            <p id="eventName" style="margin-bottom: 2rem; color: #666;"></p>
             <form onsubmit="event.preventDefault(); alert('RSVP submitted!'); closeModal('rsvpModal');">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Email Address" required>
@@ -1135,7 +1209,15 @@
             // Update nav links
             const navLinks = document.querySelectorAll('.nav-links a');
             navLinks.forEach(link => link.classList.remove('active'));
-            event.target.classList.add('active');
+            
+            // Find and activate the correct nav link
+            const targetLink = Array.from(navLinks).find(link => 
+                link.textContent.toLowerCase().includes(pageName.toLowerCase()) ||
+                (pageName === 'home' && link.textContent === 'Home')
+            );
+            if (targetLink) {
+                targetLink.classList.add('active');
+            }
             
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });

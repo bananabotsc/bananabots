@@ -933,30 +933,43 @@
         </section>
     </div>
 
-    <!-- Projects Page -->
+   <!-- Projects Page -->
     <div id="projects-page" class="page">
-        <section class="goals">
-            <h2 class="fade-in">Current Builds</h2>
-            <div class="goals-grid">
-                <div class="goal-item stagger-item delay-1">
-                    <div class="goal-number">01</div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a1a;">BananaPuck</h3>
+        <section class="goals" style="padding: 4rem 6rem;">
+            <h2 class="fade-in" style="text-align: center; margin-bottom: 3rem;">Current Builds</h2>
+            <div class="goal-item stagger-item delay-1" style="width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; border-radius: 24px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.05); background: white;">
+            
+                <!-- Project Image with Status Badge -->
+                <div style="position: relative; width: 100%; aspect-ratio: 2.5; overflow: hidden;">
+                    <img src="banana_puck_image.jpg" alt="BananaPuck Device" style="width: 100%; height: 100%; object-fit: cover;">
+                    <span style="position: absolute; top: 1rem; left: 1rem; padding: 0.5rem 1rem; background: #eab308; color: white; font-weight: 600; border-radius: 12px; font-size: 0.9rem;">
+                        In Development
+                    </span>
+                </div>
+
+                <!-- Project Text Content -->
+                <div style="padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                    <h3 style="font-size: 2rem; font-weight: 700; color: #1a1a1a;">BananaPuck</h3>
+
                     <div class="about-section-expanded">
-                        <h4>What is BananaPuck?</h4>
+                        <h4 style="color: #eab308; font-weight: 600; letter-spacing: 1px;">What is BananaPuck?</h4>
                         <p>BananaPuck is a compact, chest-worn adhesive monitoring device designed for elderly individuals and patients recovering from injury or surgery. It continuously tracks key physiological signals, movement, and basic environmental context to support early detection of health risks and improve caregiver awareness outside of clinical settings.</p>
                     </div>
+
                     <div class="about-section-expanded">
-                        <h4>How It Works</h4>
+                        <h4 style="color: #eab308; font-weight: 600; letter-spacing: 1px;">How It Works</h4>
                         <p>Embedded sensors collect data on heart rate, respiration, temperature, movement, orientation, and location. Sensor data is processed by an onboard microcontroller and wirelessly transmitted to a secure cloud server. Caregivers access the data through a dashboard that displays real-time status, alerts for abnormal readings, and historical trends for longer-term monitoring.</p>
                     </div>
+
                     <div class="about-section-expanded">
-                        <h4>Why It Matters</h4>
+                        <h4 style="color: #eab308; font-weight: 600; letter-spacing: 1px;">Why It Matters</h4>
                         <p>Many serious medical incidents are preceded by subtle warning signs. BananaPuck captures these early indicators, allowing caregivers to intervene before emergencies occur. The system promotes independence while maintaining safety.</p>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+
 
     <!-- Events Page -->
     <div id="events-page" class="page">

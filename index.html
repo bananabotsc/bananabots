@@ -990,6 +990,32 @@
                     <p>The app uses GPS to track movement and compare it to "Safe Paths" set up by family members or professionals. If the user strays from their path or remains stationary for an unusual amount of time, the app automatically notifies a designated caretaker through a secure dashboard. For the user, a large "Help Me Home" button provides simplified, high-contrast directions to guide them back to their starting point.</p>
                 </div>
             </div> <!-- Close project-card -->
+    <!-- Project Card -->
+            <div class="project-card stagger-item delay-1" style="width: 100%; max-width: 800px; margin: 0 auto 2rem; border-radius: 24px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); background: linear-gradient(135deg, #fef3c7, #fff9ed); border: 1px solid rgba(0,0,0,0.05); padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+
+                <!-- Status Badge -->
+                <span style="align-self: flex-start; padding: 0.4rem 0.8rem; background: #eab308; color: white; font-weight: 600; border-radius: 12px; font-size: 0.9rem;">
+                    In Development
+                </span>
+
+                <!-- Project Text Content -->
+                <h3 style="font-size: 2rem; font-weight: 700; color: #1a1a1a;">Pill Verification</h3>
+
+                <div class="project-about">
+                    <h4 style="color: #eab308; font-weight: 600; letter-spacing: 1px;">What is Pill Verification?</h4>
+                    <p>Pill Verification is a computer vision-based medication monitoring system that uses a smartphone camera to verify patients take the correct medications at prescribed times. The system combines optical character recognition (OCR) to identify medication bottles and pose detection to confirm pill consumption, providing caregivers with real-time verification records.</p>
+                </div>
+
+                <div class="project-about">
+                    <h4 style="color: #eab308; font-weight: 600; letter-spacing: 1px;">Why It Matters</h4>
+                    <p>Medication non-adherence affects 60-80% of elderly patients and costs the US healthcare system over $300 billion annually in preventable complications and hospitalizations. Current accountability systems rely on self-reporting and can't verify actual consumption. Pill Verification closes this gap by providing objective, automated verification that catches both accidental errors (taking the wrong medication) and intentional non-compliance, enabling early intervention before health complications arise.</p>
+                </div>
+
+                <div class="project-about">
+                    <h4 style="color: #eab308; font-weight: 600; letter-spacing: 1px;">How It Works</h4>
+                    <p>When a scheduled medication time arrives, the app sends a notification and automatically activates the phone's camera for a 30-second monitoring window. The patient holds their pill bottle up to the camera, where OCR extracts and verifies the medication name, dosage, and prescription details against their schedule. As the patient takes the pill, pose estimation tracks 33 body landmarks to detect the hand-to-mouth gesture and confirm consumption. All processing occurs in real-time on a cloud server, and verification records are instantly transmitted to the caregiver's dashboard, which displays compliance history, missed doses, and alerts for medication errors.</p>
+                </div>
+            </div> <!-- Close project-card -->
             
         </section>
     </div> <!-- Close projects-page -->
